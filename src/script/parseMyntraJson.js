@@ -8569,6 +8569,4 @@ const myntraJson = {
             }
         }
     );
-    console.log(path.normalize("./src/script/parsedMyntraListing.json"));
-    // console.log(JSON.stringify(parsedJson));
 })();

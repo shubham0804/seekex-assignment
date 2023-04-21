@@ -22,10 +22,12 @@ p {
     gap: 10px;
     position: absolute;
     top: 40%;
-    left: 10%;
+    left: 15%;
     z-index: 3;
     visibility: hidden;
+    opacity: 0;
     cursor: pointer;
+    transition: opacity 0.3s ease-in;
 }
 
 #product_details_container {
@@ -76,17 +78,20 @@ p {
 
 #image {
     width: 19vw;
+    transition: filter 0.3s;
 }
 
 #image_container:hover > img
 {
-    filter: blur(3px)
+    filter: blur(3px);
+    cursor: pointer;
 }
 
 #image:hover ~ #icons_container,
 #icons_container:hover
 {
     visibility: visible;
+    opacity: 1;
 }
 
 @media (max-width: 575px) {

@@ -6,7 +6,6 @@ import Product from "../components/Product/Product";
 const ProductDetail = () => {
     const location = useLocation();
     const navigate = useNavigate();
-    console.log(location.state);
 
     useEffect(() => {
         if (!location.state) {

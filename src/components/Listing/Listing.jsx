@@ -1,6 +1,9 @@
+import { lazy } from "react";
 import styles from "./listing.module.css";
 import dummyListing from "../../script/parsedMyntraListing.json";
-import SingleProduct from "./SingleProduct";
+// import SingleProduct from "./SingleProduct";
+
+const LazyLoadedSingeProduct = lazy(() => import("./SingleProduct"));
 
 const Listing = () => {
     return (
@@ -8,7 +11,7 @@ const Listing = () => {
             <Heading heading="Trending T-Shirts" />
             <div className={styles.listing_container}>
                 {dummyListing.map((product, i) => (
-                    <SingleProduct key={i} {...product} />
+                    <LazyLoadedSingeProduct key={i} {...product} />
                 ))}
             </div>
         </div>

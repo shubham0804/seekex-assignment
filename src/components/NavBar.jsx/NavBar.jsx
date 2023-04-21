@@ -1,10 +1,13 @@
 import styles from "./style.module.css";
-import { Bars, Search, Favorites, Cart, Profile, Share } from "../../icons/Icons";
+import { useNavigate } from "react-router-dom";
+import { Bars, Search, Favorites, Cart, Profile } from "../../icons/Icons";
 
 const NavBar = () => {
+    const navigate = useNavigate();
+
     return (
         <div className={styles.container}>
-            <Bars />
+            <Bars onClick={() => navigate("/")} />
             <div className={styles.subcontainer_right}>
                 <Search />
                 <Favorites />

@@ -20,7 +20,11 @@ const SingleProduct = (productDetails) => {
 
     return (
         <div id={styles.single_product_container}>
-            <div id={styles.image_container} style={{ position: "relative" }}>
+            <div
+                onClick={onProductClick}
+                id={styles.image_container}
+                style={{ position: "relative" }}
+            >
                 <img id={styles.image} src={imagesToDisplay[0]} alt={name} />
                 <ImageHoverIcons />
             </div>
@@ -42,7 +46,13 @@ const SingleProduct = (productDetails) => {
 };
 
 const ImageHoverIcons = () => (
-    <div id={styles.icons_container}>
+    <div
+        id={styles.icons_container}
+        onClick={(e) => {
+            e.stopPropagation();
+            console.log("clicked");
+        }}
+    >
         <IconContainer Icon={Cart} />
         <IconContainer Icon={Favorites} />
         <IconContainer Icon={Share} />
