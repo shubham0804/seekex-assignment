@@ -1,0 +1,38 @@
+.container {
+    margin: 5vh 5vw;
+}
+
+.divider {
+    height: 1px;
+    width: 100%;
+    background-color: #FFC7D1;
+    margin: auto 0;
+}
+
+.heading_container {
+    display: flex;
+}
+
+.heading {
+    white-space: nowrap;
+    margin: 0 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.listing_container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 25px;
+    /* display: grid;
+    grid-auto-flow: column; */
+    /* grid-template-columns: 3fr 3fr 3fr; */
+    padding: 0 auto;
+    margin-top: 40px;
+    /* grid-template-columns: repeat(3, 1fr);
+  gap: 10px; */
+}
+
+p,b {
+    width: fit-content;
+}

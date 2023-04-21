@@ -1,9 +1,11 @@
-import NavBar from "../components/Product/NavBar.jsx/NavBar";
-import Listing from "../components/Product/Listing";
+import NavBar from "../components/NavBar.jsx/NavBar";
+import Listing from "../components/Listing/Listing";
 
 export default () => {
-    return <>
-        <NavBar/>
-        <Listing/>
-    </>
-}
+    return (
+        <>
+            <NavBar />
+            <Listing />
+        </>
+    );
+};

@@ -1,5 +1,5 @@
 import styles from "./style.module.css";
-import { Bars, Search, Favorites, Cart, Profile, Share } from "../../../icons/Icons";
+import { Bars, Search, Favorites, Cart, Profile, Share } from "../../icons/Icons";
 
 const NavBar = () => {
     return (
