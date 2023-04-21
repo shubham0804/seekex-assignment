@@ -31,7 +31,8 @@ p {
 #product_details_container {
     width: 100%;
     max-width: 19vw;
-    padding-left: 10px 
+    padding-left: 10px;
+    cursor: pointer;
 }
 
 #brand_text {

@@ -1,9 +1,22 @@
+import { useNavigate } from "react-router-dom";
 import styles from "./singleProduct.module.css";
 import { Share, Cart, Favorites } from "../../icons/Icons";
 
-const SingleProduct = ({ images, brand, name, amount: { original, discounted } }) => {
+const SingleProduct = (productDetails) => {
+    const navigate = useNavigate();
+    const {
+        images,
+        brand,
+        name,
+        amount: { original, discounted },
+    } = productDetails;
+
     const imagesToDisplay = images.map((image) => image.src).filter((image) => !!image);
     const sizes = ["S", "M", "L", "XL", "XXL"];
+
+    const onProductClick = () => {
+        navigate("/product", { state: productDetails });
+    };
 
     return (
         <div id={styles.single_product_container}>
@@ -11,7 +24,7 @@ const SingleProduct = ({ images, brand, name, amount: { original, discounted } }
                 <img id={styles.image} src={imagesToDisplay[0]} alt={name} />
                 <ImageHoverIcons />
             </div>
-            <div id={styles.product_details_container}>
+            <div onClick={onProductClick} id={styles.product_details_container}>
                 <p id={styles.brand_text}>{brand}</p>
                 <p id={styles.product_name}>{name}</p>
                 <div id={styles.price_container}>
